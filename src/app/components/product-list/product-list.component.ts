@@ -9,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
   products: Product[];
+  displayColumns = ['image', 'name', 'category', 'price', 'Action'];
+  loading: boolean = false;
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
+    this.loadProducts();
+  }
+  loadProducts() {
     this.productService.getAllProducts().subscribe((response: Product[]) => {
       this.products = response;
     });
@@ -26,4 +31,5 @@ export class ProductListComponent implements OnInit {
   deleteProduct(id: number) {
     this.productService.deleteProduct(id).subscribe();
   }
+  handleUpdate(product: Product) {}
 }
