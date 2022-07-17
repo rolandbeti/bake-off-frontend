@@ -1,10 +1,7 @@
 import { Product } from './../model/product';
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root',
-})
+
 export class ProductService {
   rootPath: string = 'http://localhost:8081';
   constructor(private httpClient: HttpClient) {}
