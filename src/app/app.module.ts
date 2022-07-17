@@ -42,6 +42,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { CategoryListComponent } from './components/category-list/category-list.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { HttpClientModule } from '@angular/common/http';
     UserListComponent,
     MenuComponent,
     FooterComponent,
+    AddProductComponent,
+    CategoryListComponent,
   ],
   imports: [
     BrowserModule,
