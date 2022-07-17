@@ -14,12 +14,12 @@ export class CustomerService {
     return this.httpClient.get(`${this.rootPath}/api/customers`);
   }
 
-  addProduct(product: Customer) {
-    return this.httpClient.post(`${this.rootPath}/api/products`, product);
+  addCustomer(customer: Customer) {
+    return this.httpClient.post(`${this.rootPath}/api/customers`, customer);
   }
 
-  deleteProduct(id: Number) {
-    return this.httpClient.delete(`${this.rootPath}/api/products/${id}`);
+  deleteCustomer(id: Number) {
+    return this.httpClient.delete(`${this.rootPath}/api/customers/${id}`);
   }
 
 }
