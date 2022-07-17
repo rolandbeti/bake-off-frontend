@@ -1,4 +1,4 @@
-import { Product } from './../model/product';
+import { Customer } from './../model/customer';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -9,15 +9,15 @@ export class ProductService {
   rootPath: string = 'http://localhost:8081';
   constructor(private httpClient: HttpClient) {}
 
-  getAllProducts() {
-    return this.httpClient.get(`${this.rootPath}/api/products`);
+  getAllCustomers() {
+    return this.httpClient.get(`${this.rootPath}/api/customers`);
   }
 
-  addProduct(product: Product) {
-    return this.httpClient.post(`${this.rootPath}/api/products`, product);
+  addCustomer(customer: Customer) {
+    return this.httpClient.post(`${this.rootPath}/api/customers`, customer);
   }
 
-  deleteProduct(id: Number) {
-    return this.httpClient.delete(`${this.rootPath}/api/products/${id}`);
+  deleteCustomer(id: Number) {
+    return this.httpClient.delete(`${this.rootPath}/api/customers/${id}`);
   }
 }
