@@ -11,14 +11,14 @@ export class CategoryService {
   constructor(private HttpClient: HttpClient ) { }
 
   getAllProducts(){
-    return this.HttpClient.get(`${this.rootPath}`)
+    return this.HttpClient.get(`${this.rootPath}/api/products`)
   }
   addProduct(product:Product){
-    return this.HttpClient.post(`${this.rootPath}`,product)
+    return this.HttpClient.post(`${this.rootPath}/api/products`,product)
   }
 
   deleteProduct(id: Number){
-    return this.HttpClient.delete(`${this.rootPath}`)
+    return this.HttpClient.delete(`${this.rootPath}/api/products${id}`)
   }
 
 
